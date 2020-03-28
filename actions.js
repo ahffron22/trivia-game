@@ -30,31 +30,32 @@ $(document).ready(function() {
   var userGuess = "";
   var correct = "Correct!";
   var wrong = "Wrong!";
-  var answer = $("right");
-  // $(".choice").click(function() {
-  //   userGuess = $(this);
-  //   if (userGuess === answer) {
-  //     $("#answer").text(correct);
-  //   } else {
-  //     $("#answer").text(wrong);
-  //   }
+  var answer = $("#right");
+  $(".choice").click(function() {
+    userGuess = $(this).attr("id");
+    console.log(userGuess);
+    if (userGuess === "right") {
+      $("#answer").text(correct);
+    } else {
+      $("#answer").text(wrong);
+    }
+  });
+  // $("#a1").click(function() {
+  //   $("#answer").text(correct);
   // });
-  $("#a1").click(function() {
-    $("#answer").text(correct);
-  });
-  $("#w1").click(function() {
-    $("#answer").text(wrong);
-  });
-  $("#a2").click(function() {
-    $("#answer2").text(correct);
-  });
-  $("#w2").click(function() {
-    $("#answer2").text(wrong);
-  });
-  $("#a3").click(function() {
-    $("#answer3").text(correct);
-  });
-  $("#w3").click(function() {
-    $("#answer3").text(wrong);
-  });
+  // $("#w1").click(function() {
+  //   $("#answer").text(wrong);
+  // });
+  // $("#a2").click(function() {
+  //   $("#answer2").text(correct);
+  // });
+  // $("#w2").click(function() {
+  //   $("#answer2").text(wrong);
+  // });
+  // $("#a3").click(function() {
+  //   $("#answer3").text(correct);
+  // });
+  // $("#w3").click(function() {
+  //   $("#answer3").text(wrong);
+  // });
 });
